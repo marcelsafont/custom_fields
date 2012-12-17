@@ -1,0 +1,4 @@
+name = Custom fields
+description = Allows to set permissions for users in certains fields
+core = 7.x
+configure = admin/config

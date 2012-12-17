@@ -1,0 +1,15 @@
+<?php
+/**
+* @file
+* allows to set permissions for certain fields
+*/
+
+/**
+* implements hook_field_acces
+*/
+function custom_fields_field_access($op, $field, $entity_type, $entity, $account) {
+  if ($field['field_name'] == 'field_categoria' && $op == 'edit') {
+    return user_access('edit field of interest', $account);
+  }
+  return TRUE;
+}
